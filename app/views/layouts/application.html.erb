@@ -16,5 +16,10 @@
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
+  <footer>
+    <p>
+      <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+    </p>
+  </footer>
   </body>
 </html>

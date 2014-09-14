@@ -16,6 +16,7 @@ gem 'therubyracer', :platform=>:ruby
 gem 'sorcery'
 gem 'tzinfo-data'
 gem 'rails_admin'
+gem 'i18n'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]

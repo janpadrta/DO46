@@ -1,5 +1,5 @@
-<% content_for :title do %>About<% end %>
-<h3>About the Website</h3>
+<% content_for :title do %><%= t('pages.about') %><% end %>
+<h3><%= t('pages.about_long') %></h3>
 <p>
 This web application was created with
 <%= link_to('Rails Composer', 'http://railsapps.github.io/rails-composer/') %>
