@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140914131356) do
+ActiveRecord::Schema.define(version: 20140914195126) do
 
   create_table "users", force: true do |t|
     t.string   "email",                                       null: false
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140914131356) do
     t.datetime "last_logout_at"
     t.datetime "last_activity_at"
     t.string   "last_login_from_ip_address"
+    t.string   "username"
   end
 
   add_index "users", ["activation_token"], name: "index_users_on_activation_token"

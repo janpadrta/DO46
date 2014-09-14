@@ -2,7 +2,8 @@
 # The default is nothing which will include only core features (password encryption, login/logout).
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging, :external
-Rails.application.config.sorcery.submodules = [:core, :user_activation, :reset_password, :remember_me, :session_timeout, :brute_force_protection, :http_basic_auth, :activity_logging]
+Rails.application.config.sorcery.submodules = [:core, :user_activation, :reset_password, :remember_me, :session_timeout,
+                                               :brute_force_protection, :http_basic_auth, :activity_logging]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -37,7 +38,7 @@ Rails.application.config.sorcery.configure do |config|
   # Use the last action as the beginning of session timeout.
   # Default: `false`
   #
-  # config.session_timeout_from_last_action =
+  config.session_timeout_from_last_action = true
 
 
   # -- http_basic_auth --
@@ -146,7 +147,7 @@ Rails.application.config.sorcery.configure do |config|
     # specify username attributes, for example: [:username, :email].
     # Default: `[:email]`
     #
-    # user.username_attribute_names =
+    user.username_attribute_names = [:username, :email]
 
 
     # change *virtual* password attribute, the one which is used until an encrypted one is generated.
@@ -195,7 +196,7 @@ Rails.application.config.sorcery.configure do |config|
     # WARNING: If used for users' passwords, changing this key will leave passwords undecryptable!
     # Default: `nil`
     #
-    # user.encryption_key =
+    #user.encryption_key =
 
 
     # use an external encryption class.
@@ -207,13 +208,13 @@ Rails.application.config.sorcery.configure do |config|
     # encryption algorithm name. See 'encryption_algorithm=' for available options.
     # Default: `:bcrypt`
     #
-    # user.encryption_algorithm =
+    #user.encryption_algorithm =
 
 
     # make this configuration inheritable for subclasses. Useful for ActiveRecord's STI.
     # Default: `false`
     #
-    # user.subclasses_inherit_config =
+    user.subclasses_inherit_config = true
 
 
     # -- remember_me --
@@ -250,13 +251,12 @@ Rails.application.config.sorcery.configure do |config|
     # how many seconds before the activation code expires. nil for never expires.
     # Default: `nil`
     #
-    # user.activation_token_expiration_period =
-
+    user.activation_token_expiration_period = 86400
 
     # your mailer class. Required.
     # Default: `nil`
     #
-    # user.user_activation_mailer =
+    user.user_activation_mailer = UserMailer
 
 
     # when true sorcery will not automatically
@@ -303,11 +303,10 @@ Rails.application.config.sorcery.configure do |config|
     #
     # user.reset_password_email_sent_at_attribute_name =
 
-
     # mailer class. Needed.
     # Default: `nil`
     #
-    # user.reset_password_mailer =
+    user.reset_password_mailer = UserMailer
 
 
     # reset password email method on your mailer class.
@@ -352,7 +351,7 @@ Rails.application.config.sorcery.configure do |config|
     # How many failed logins allowed.
     # Default: `50`
     #
-    # user.consecutive_login_retries_amount_limit =
+    user.consecutive_login_retries_amount_limit = 10
 
 
     # How long the user should be banned. in seconds. 0 for permanent.
