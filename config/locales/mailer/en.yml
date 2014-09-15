@@ -1,0 +1,10 @@
+en:
+  user_mailer:
+    activation_needed_email:
+      welcome_subject: "Welcome to the world of DuneOnline."
+
+    activation_success_email:
+      activation_subject: "Your account is now activated"
+
+    reset_password_email:
+      pass_reset: "Your password has been reset"

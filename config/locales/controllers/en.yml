@@ -13,3 +13,14 @@ en:
   sessions:
     create:
       loggedin: "Logged in!"
+      mail_invalid: "Email or password was invalid"
+
+    destroy:
+      logout: "Logged out!"
+
+  users:
+    create:
+      signed_up: "Signed up!"
+
+    activate:
+      activated: 'User was successfully activated.'

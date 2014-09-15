@@ -1,0 +1,20 @@
+en:
+  home: 'Home'
+  logout: 'Log Out'
+  signup: 'Sign Up'
+  login: 'Log In'
+
+  pages:
+    about: 'About'
+    about_long: 'About the Website'
+
+  password_resets:
+    edit:
+      title: 'Choose a new password'
+
+  sessions:
+    forgot_password_form:
+      submit: "Reset my password!"
+
+    new:
+      title: 'Forgot Password?'
