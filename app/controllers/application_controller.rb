@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   def not_authenticated
-    redirect_to login_url, :alert => "First login to access this page."
+    redirect_to login_url, :alert => t('application.not_authenticated.alert')
   end
 
   protected

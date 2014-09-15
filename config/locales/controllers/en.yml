@@ -1,0 +1,15 @@
+en:
+  application:
+    not_authenticated:
+      alert: "First login to access this page."
+
+  password_resets:
+    create:
+      success: 'Instructions have been sent to your email.'
+
+    update:
+      updated: 'Password was successfully updated.'
+
+  sessions:
+    create:
+      loggedin: "Logged in!"
