@@ -3,6 +3,7 @@ en:
   logout: 'Log Out'
   signup: 'Sign Up'
   login: 'Log In'
+  forminvalid: 'Form is invalid'
 
   pages:
     about: 'About'
@@ -18,3 +19,6 @@ en:
 
     new:
       title: 'Forgot Password?'
+
+  users:
+    new:
