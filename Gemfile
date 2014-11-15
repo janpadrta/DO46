@@ -17,13 +17,19 @@ gem 'sorcery'
 gem 'tzinfo-data'
 gem 'rails_admin'
 gem 'i18n'
+
+gem 'cancancan', '~> 1.9'
+gem 'kaminari' #, '0.10.4'
+gem 'decent_exposure'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
-  gem 'annotate'
+  gem 'nifty-generators'
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 end
 group :development, :test do
   gem 'factory_girl_rails'
