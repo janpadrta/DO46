@@ -23,6 +23,23 @@
 #  last_logout_at                  :datetime
 #  last_activity_at                :datetime
 #  last_login_from_ip_address      :string(255)
+#  username                        :string(255)
+#  house_id                        :integer
+#  solar                           :decimal(12, 4)   default(0.0)
+#  melange                         :decimal(12, 4)   default(0.0)
+#  exp                             :decimal(12, 4)   default(0.0)
+#  admin                           :boolean          default(FALSE)
+#  leader                          :boolean          default(FALSE)
+#  emperor                         :boolean          default(FALSE)
+#  arrakis                         :boolean          default(FALSE)
+#  regent                          :boolean          default(FALSE)
+#  vezir                           :boolean          default(FALSE)
+#  court                           :boolean          default(FALSE)
+#  mentat                          :boolean          default(FALSE)
+#  army_mentat                     :boolean          default(FALSE)
+#  diplomat                        :boolean          default(FALSE)
+#  senator                         :boolean          default(FALSE)
+#  chairman                        :boolean          default(FALSE)
 #
 
 require 'rails_helper'
