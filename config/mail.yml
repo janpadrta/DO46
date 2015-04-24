@@ -1,6 +1,6 @@
 development: &defaults
   user_name: "onlineduna@gmail.com"
-  password: "JanHus671415"
+  password: ""
 
 production:
   <<: *defaults
